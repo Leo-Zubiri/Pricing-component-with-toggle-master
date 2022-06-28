@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <link rel="stylesheet" href="./css/styles.css"/>
+
+</head>
+<body>
+
+  <main>
+
+
+    <h1 class="title">Our Pricing</h1>
+    <div class="toggle_container"> 
+      Annually 
+      <label class="switch">
+      <input id="check" type="checkbox" checked="true" >
+      <span class="slider round"></span>
+      </label> 
+      Monthly 
+    </div>
+  
+    <div class="card_container">
+  
+      <div class="card">
+        <p class="card__title">Basic</p>
+        <p class="card__price_monthly">&dollar;19.99</p>
+        <p class="card__price_anualy hide">&dollar;199.99</p>
+        <div class="card__description">
+          <p class="card__description__item">500 GB Storage</p>
+          <p class="card__description__item">2 Users Allowed</p>
+          <p class="card__description__item">Send up to 3 GB</p>
+        </div>
+        <button class="card__act">Learn More</button>
+      </div>
+    
+      
+      
+      <div class="card card--highlighted">
+        <p class="card__title">Professional</p>
+        <p class="card__price_monthly">&dollar;24.99</p>
+        <p id="price2" class="card__price_anualy hide">&dollar;249.99</p>
+        <div class="card__description">
+          <p class="card__description__item">1 TB Storage</p>
+          <p class="card__description__item">5 Users Allowed</p>
+          <p class="card__description__item">Send up to 10 GB</p>
+        </div>
+        <button class="card__act">Learn More</button>
+      </div>
+    
+      
+      <div class="card">
+        <p class="card__title">Master</p>
+        <p class="card__price_monthly">&dollar;39.99</p>
+        <p class="card__price_anualy hide">&dollar;399.99</p>
+        <div class="card__description">
+          <p class="card__description__item">2 TB Storage</p>
+          <p class="card__description__item">10 Users Allowed</p>
+          <p class="card__description__item">Send up to 20 GB</p>
+        </div>
+        <button class="card__act">Learn More</button>
+      </div>
+  
+    </div>
+
+  </main>
+  
+
+  <script type="text/javascript">
+
+    let check = document.getElementById('check');
+    
+    let price1 = document.getElementsByClassName('card__price_monthly');
+  
+    let price2 = document.getElementsByClassName('card__price_anualy');
+
+    check.onchange = () => {
+      if(check.checked){
+        for(p of price1){p.classList.remove('hide');}
+        for(p of price2){p.classList.add('hide');}
+      }else{ 
+        for(p of price2){p.classList.remove('hide');}
+        for(p of price1){p.classList.add('hide');}
+      }
+    }
+
+
+  </script>
+</body>
+</html>
