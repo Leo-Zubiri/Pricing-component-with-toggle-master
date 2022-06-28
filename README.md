@@ -1,4 +1,4 @@
-## [Site here>>> 🚀](https://leo-zubiri.github.io/ProductCardPreview/)
+## [Site here>>> 🚀](https://leo-zubiri.github.io/Pricing-component-with-toggle-master/)
 
 # Pricing component with toggle
 
